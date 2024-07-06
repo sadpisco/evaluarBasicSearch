@@ -2,7 +2,6 @@ import React from 'react';
 import styles from "./card.module.css";
 
 const Card = ({character}) => {
-  console.log(character);
   return (
     <div className='h-50 w-30 flex flex-col items-center justify-center bg-neutral-900 p-5 m-4 rounded-lg hover:scale-105 hover:shadow-4xl ease-in duration-100'>
     <div className='flex flex-col items-center justify-center gap-5'>

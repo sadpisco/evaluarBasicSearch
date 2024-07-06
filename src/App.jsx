@@ -12,15 +12,13 @@ function App() {
 
 const bringCharacters  = async function (event) {
     if (event == null || event.target.value.length == 0) {
-    
     try {
-    async function chars () {
-    let endPoint = "https://rickandmortyapi.com/api/character";
-    const response = await axios.get(endPoint);
-    const parsed = response.data.results;
-    console.log('Se hizo una peticion por los 20 primeros chars.')
-    return setCharacters(parsed);
-    }chars();
+        async function chars () {
+          let endPoint = "https://rickandmortyapi.com/api/character";
+          const response = await axios.get(endPoint);
+          const parsed = response.data.results;
+          return setCharacters(parsed);
+          }chars();
     } catch {
       console.log("No se pudieron fetchear los characters");
     }
@@ -31,6 +29,7 @@ const bringCharacters  = async function (event) {
     const response = await axios.get(endPoint);
     const parsed = response.data.results[0];
     setCharacters([parsed]);
+    console.log(`Peticion ${valor}`)
   } catch {
     console.log("No se pudieron fetchear los characters");
   }
